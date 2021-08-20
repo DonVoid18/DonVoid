@@ -1,0 +1,76 @@
+footer{
+    width: 100%;
+    background-color: var(--background-header);
+    color: white;
+}
+/* css del contenedor de los bloques */
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 10%;
+}
+/* css del contenedor bloque */
+.contenedor-bloque{
+    width: 220px;
+    padding: 20px;
+}
+.contenedor-bloque ul{
+    list-style: none;
+    padding: none;
+}
+.contenedor-bloque li{
+    padding: 5px 0;
+    text-align: justify;
+}
+.contenedor-bloque a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor-bloque a:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}
+/* css del contenedor derechos de autor */
+.contenedor-derechos-autor{
+    padding: 20px 0;
+    text-align: center;
+}
+/* css del contenedor correo */
+.contenedor-correo{
+    width: 180px;
+    margin: 10px 0;
+    display: flex;
+}
+.contenedor-input-correo{
+    display: flex;
+    width: 80%;
+}
+.contenedor-input-correo input{
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.contenedor-boton-correo{
+    width: 20%;
+}
+.contenedor-boton-correo button{
+    width: 100%;
+    padding: 5px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+/* css del contenedor redes sociales */
+.contenedor-redes-sociales{
+    padding: 5px 0;
+    font-size: 2.5em;
+}
+@media (max-width: 1100px){
+    .contenedor-bloque{
+        width: 300px;
+        padding: 10px;
+    }
+}

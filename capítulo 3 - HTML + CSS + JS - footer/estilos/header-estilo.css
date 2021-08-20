@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #23a6e3;
+    padding: 90px 0 0 0;
+}
+:root{
+    --background-header: #1b1f25;
+}
+/* css del header */
+.header-1{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background-color: var(--background-header);
+}
+/* css del contenedor de la imagen */
+.contenedor-logo-imagen{
+    width: 200px;
+    transition: 0.3s ease;
+}
+.contenedor-logo-imagen img{
+    width: 100%;
+}
+/* css de contenedor navegacion principal */
+.navegacion-principal{
+    width: 500px;
+    transition: 0.3s ease;
+}
+.navegacion-principal ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.navegacion-principal ul li a{
+    text-decoration: none;
+    color: white;
+}
+/* css de los iconos de redes sociales */
+.fa-facebook{
+    color: #0074fc;
+}
+.fa-youtube{
+    color: red;
+}
+.fa-github{
+    color: white;
+}
+/* css del boton siempre desactivado hasta que se cumpla la condicion */
+.contenedor-menu-responsive{
+    display: none;
+}
+/* medias query */
+@media (max-width: 830px){
+    .contenedor-logo-imagen{
+        width: 150px;
+    }
+    .navegacion-principal{
+        width: 400px;
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 630px){
+    /* css del boton menu responsive */
+    .contenedor-menu-responsive{
+        display: block;
+    }
+    .boton-menu-responsive{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    /* css de la navegacion principal con responsive */
+    .navegacion-principal{
+        font-size: 1em;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        background-color: black;
+    }
+    .navegacion-principal ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion-principal ul li{
+        padding: 20px 0;
+    }
+
+    /* Esta clase se agregará cuando se pulse el boton */
+    .activo{
+        left: 0;
+    }
+}
+main{
+    flex-grow: 1;
+}
