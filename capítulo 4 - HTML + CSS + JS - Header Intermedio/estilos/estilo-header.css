@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-1: #1b1f25;
+    --color-2: #00b4d8;
+    --color-text: white;
+}
+html{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header-1{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-1);
+}
+
+/* css del contenedor navegacion */
+.contenedor-navegacion-pagina{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4em;
+}
+/* css del logo de la pagina */
+.contenedor-logo-pagina{
+    width: 10em;
+}
+.contenedor-logo-pagina img{
+    width: 100%;
+}
+
+/* css de los items de la navegacion de la pagina */
+.contenedor-nav-pagina{
+    width: 35em;
+}
+.navegacion-principal{
+    transition: 0.3s ease-in;
+}
+.contenedor-nav-pagina nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedor-nav-pagina nav ul li a{
+    text-decoration: none;
+    color: var(--color-text);
+    transition: 0.3s ease-in;
+}
+.contenedor-nav-pagina nav ul li a:hover{
+    color: var(--color-2);
+}
+
+/* css del banner de la pagina */
+.contenedor-banner-pagina{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 5em);
+}
+.contenedor-info-banner-pagina{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5em;
+}
+/* css de la iamgen del banner */
+.contenedor-imagen-banner{
+    width: 40rem;
+}
+.contenedor-imagen-banner img{
+    width: 100%;
+}
+/* css del texto del banner */
+.contenedor-text-banner{
+    width: 30em;
+    padding: 2em 5em;
+}
+.contenedor-texto-estatico-banner{
+    width: 100%;
+    color: var(--color-text);
+    font-size: 2em;
+    padding-bottom: 0.9375rem;
+    font-weight: 600;
+}
+.contenedor-texto-dinamico-banner{
+    width: 100%;
+    height: 70px;
+    color: var(--color-text);
+}
+.contenedor-botones-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9375rem 0;
+}
+.contenedor-botones-banner button{
+    padding: 0.4375rem 1.25rem;
+    background-color: var(--color-2);
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    border-radius: 5px;
+}
+.contenedor-botones-banner button:hover{
+    background: var(--color-1);
+    box-shadow: 0px 0px 5px 0px var(--color-text);
+}
+/* css de los iconos de redes sociales */
+.fa-facebook{
+    color: #0074fc;
+}
+.fa-youtube{
+    color: red;
+}
+.fa-github{
+    color: var(--color-text);
+}
+/* css del menu respnsive */
+.contenedor-boton-menu-responsive{
+    display: none;
+}
+.boton-menu-responsive{
+    background: none;
+    border: none;
+    color: var(--color-text);
+}
+@media (max-width: 1280px){
+    html{
+        font-size: 12px;
+    }
+}
+@media (max-width: 960px){
+    html{
+        font-size: 10px;
+    }
+}
+@media (max-width: 800px){
+    .contenedor-info-banner-pagina{
+        padding: 0 3em;
+    }
+    .contenedor-text-banner{
+        width: 35em;
+        padding: 7em 5em;
+    }
+}
+@media (max-width: 570px){
+    .contenedor-boton-menu-responsive{
+        display: block;
+    }
+    /* css del boton menu responsive el estilo se encuentra en el video 2 de la página*/
+    .boton-menu-responsive{
+        background: none;
+        border: none;
+        color: var(--color-text);
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    /* css de la navegacion principal con responsive */
+    .navegacion-principal{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 5em;
+        background-color: var(--color-1);
+        z-index: 100;
+    }
+    .navegacion-principal ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion-principal ul li{
+        padding: 20px 0;
+    }
+
+    /* Esta clase se agregará cuando se pulse el boton */
+    .activo{
+        left: 0;
+    }
+}
